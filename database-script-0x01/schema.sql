@@ -1,6 +1,6 @@
 Create EXTENSION IF NOT EXISTS "pgcrypto";
 
-Create DATABASE AirBNB;
+-- Create DATABASE AirBNB;
 
 Create SCHEMA AirBNB_Schema;
 

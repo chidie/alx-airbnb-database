@@ -76,9 +76,22 @@ Indexes are designed to optimize JOINs, filters, and frequent queries.
 ---
 
 ## Setup Instructions
+1. **Install PostgreSQL**
+   ```
+   https://www.postgresql.org/download/
+
+2. **Setup PostgreSQL superuser name (usually postgres), choose a password and Install pgAdmin (optional GUI)**
+
+3. **Add path to system environment variables**
+
+2. **Create Database AirBNB**
+   ```sql
+   psql -U postgres -c "CREATE DATABASE AirBNB"
 
 1. **Enable UUID generation**
    ```sql
    CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+
+
 
 
