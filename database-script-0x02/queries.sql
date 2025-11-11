@@ -67,3 +67,6 @@ SELECT
   booking_id, property_id, user_id, start_date, end_date, total_price, status, created_at
 FROM airbnb_schema.bookings
 WHERE start_date >= '2025-01-01' AND start_date < '2026-01-01';
+
+--- This query retrieves all possible values from the payment_method_enum enumeration type.
+SELECT unnest(enum_range(NULL::payment_method_enum));
