@@ -28,3 +28,5 @@ Helpful commands
   EXPLAIN ANALYZE;
 
 - Subqueries are also contained in the subqueries.sql script.
+
+- Added aggregation and window functions.
