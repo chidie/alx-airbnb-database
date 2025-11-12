@@ -70,3 +70,14 @@ WHERE start_date >= '2025-01-01' AND start_date < '2026-01-01';
 
 --- This query retrieves all possible values from the payment_method_enum enumeration type.
 SELECT unnest(enum_range(NULL::payment_method_enum));
+
+
+
+--- This command removes the existing primary key constraint from the bookings_partitioned table.
+ALTER TABLE airbnb_schema.bookings_partitioned DROP CONSTRAINT bookings_partitioned_pkey;
+ 
+--- This command adds a primary key constraint to the bookings_partitioned table on the booking_id column.
+ALTER TABLE airbnb_schema.bookings_partitioned ADD PRIMARY KEY (booking_id);
+
+--- This query lists all constraints on the bookings_partitioned table to verify the primary key change.
+select conname FROM pg_constraint WHERE conrelid = 'airbnb_schema.bookings_partitioned'::regclass;
